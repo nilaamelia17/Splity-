@@ -641,9 +641,10 @@ body {
     }
 
     /* PEOPLE */
-  .item-people {
+  /* PEOPLE */
+.item-people {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 8px;
     width: 100%;
 }
@@ -653,11 +654,13 @@ body {
     align-items: center;
     justify-content: flex-start !important;
     gap: 6px;
-    width: auto !important;
     min-width: 0;
+    width: 100%;
 }
 
 .item-person input {
+    width: 16px;
+    height: 16px;
     flex-shrink: 0;
     margin: 0;
 }
@@ -669,18 +672,14 @@ body {
     text-overflow: ellipsis;
 }
 
-.item-person input {
-    flex-shrink: 0;
+.people-list {
+    width: 100%;
 }
 
-    .people-list {
-        width: 100%;
-    }
-
-    .person-input {
-        width: 100%;
-        box-sizing: border-box;
-    }
+.person-input {
+    width: 100%;
+    box-sizing: border-box;
+}
 
     /* RESULT */
     .result-actions {
