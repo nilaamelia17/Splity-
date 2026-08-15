@@ -263,9 +263,9 @@ body {
 
 /* orang yg punya item */
 .item-people {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .item-people label {
@@ -275,6 +275,7 @@ body {
     margin: 0;
     color: #333;
     font-size: 13px;
+    width: auto;
 }
 
 .item-people input {
@@ -641,8 +642,6 @@ body {
     }
 
     /* PEOPLE */
-  /* PEOPLE */
-/* PEOPLE */
 .item-people {
     display: flex;
     flex-wrap: wrap;
