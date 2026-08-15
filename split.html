@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Split Bill — Splity!</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main class="split-page">
+        <section class="split-card">
+            <h1>Splity!</h1>
+        
+            <!-- nama bil -->
+            <div class="form-group">
+
+                <label for="bill-name">
+                    What's this bill for?
+                </label>
+
+                <input type="text" id="bill-name" placeholder="warung bi eem">                                     
+            </div>
+
+            <!-- orang -->
+            <div class="form-group">
+
+                <label>
+                    Who's splitting?
+                </label>
+
+                <div class="people-list" id="people-list">
+                    <input type="text" class="person-input" placeholder="Name">
+                </div>
+     
+                <button type="button" class="add-person" id="add-person">
+                    + add person
+                </button>
+            </div>
+
+            <!-- tipe splitnya -->
+            <div class="form-group">
+
+                <label>
+                    Type of split
+                </label>
+
+                <div class="split-options">
+                    <button type="button" data-type="equally">
+                        equally
+                    </button>
+                        
+                    <button type="button" data-type="item">
+                        by item
+                    </button>
+  
+                    <button type="button" data-type="custom">
+                        custom
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- tipe equally -->
+            <div class="split-section hidden" id="equally-section">
+                <h2>Equally</h2>
+
+                <div class="bill-details">
+                    <div class="form-group">
+
+                        <label for="equal-total">
+                            Total bill
+                        </label>
+
+                        <input type="text" id="equal-total" placeholder="Rp 0">
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="equal-tax">
+                            Tax
+                        </label>
+
+                        <input type="text" id="equal-tax" placeholder="11%">
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="equal-service">
+                            Service charge
+                        </label>
+
+                        <input type="text" id="equal-service" placeholder="5%">
+                    </div>
+                </div>
+
+                <button type="button" class="calculate-btn">
+                    Calculate it
+                </button>
+            </div>
+
+            <!-- tipe by item -->
+            <div class="split-section hidden" id="item-section">
+                <h2>By Item</h2>
+                <div class="form-group">
+                    <label>
+                        Items
+                    </label>
+
+                    <div class="item-list">
+
+                        <!-- ITEM 1 -->
+                        <div class="item-card">
+                            <input type="text"  placeholder="Item name">
+                              <input type="text" placeholder="Rp 0">
+                    
+                            <p>
+                                Who had this?
+                            </p>   
+          
+                            <div class="item-people">
+                                <label>
+                                    <input type="checkbox">
+                                    Ela
+                                </label>
+
+                                <label>
+                                    <input type="checkbox">
+                                    dea
+                                </label>
+
+                                <label>
+                                    <input type="checkbox">
+                                    Caca
+                                </label>
+                            </div>
+
+                        </div>
+
+                        <!-- ITEM 2 -->
+
+                        <div class="item-card">
+                            <input type="text"  placeholder="Item name">
+                                <input type="text" placeholder="Rp 0">
+                            <p>
+                                Who had this?
+                            </p>
+
+                            <div class="item-people">
+                                <label>
+                                    <input type="checkbox">
+                                    Ela
+                                </label>
+
+                                <label>
+                                    <input type="checkbox">
+                                    dea
+                                </label>
+
+                                <label>
+                                    <input type="checkbox">
+                                    Caca
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button type="button" class="add-item" id="add-item">
+                        + add item
+                    </button>
+                </div>
+
+
+                <div class="bill-details">
+                    <div class="form-group">
+
+                        <label for="item-tax">
+                            Tax
+                        </label>
+
+                        <input type="text" id="item-tax" placeholder="11%">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="item-service">
+                            Service charge
+                        </label>
+
+                        <input type="text" id="item-service" placeholder="5%">                        
+                    </div>
+                </div>
+
+                <button type="button" class="calculate-btn">
+                    Calculate it
+                </button>
+            </div>
+
+            <!-- custom -->
+            <div class="split-section hidden" id="custom-section">
+                <h2>Custom</h2> 
+
+                <!-- TOTAL BILL -->
+                <div class="form-group">
+                    <label for="custom-total">
+                        Total bill
+                    </label>
+
+                    <input type="text" id="custom-total" placeholder="Rp 0">
+                </div>
+
+                <!-- SET AMOUNT -->
+                <div class="form-group">
+                    <label>
+                        Set amount
+                    </label>
+
+                    <div class="custom-people">
+                        <div class="custom-person">
+                            <span>Ela</span>
+
+                            <input type="text" placeholder="Rp 0">
+                        </div>
+
+                        <div class="custom-person">
+                            <span>Dea</span>
+                            <input type="text" placeholder="Rp 0">
+                        </div>
+
+
+                        <div class="custom-person">
+                            <span>Caca</span>
+                            <input type="text" placeholder="Rp 0">                                                                                            
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- TAX + SERVICE -->
+
+                <div class="bill-details">
+
+                    <div class="form-group">
+                        <label for="custom-tax">
+                            Tax
+                        </label>
+
+                        <input type="text" id="custom-tax" placeholder="11%">                        
+                    </div>
+
+                    <div class="form-group">
+                        <label for="custom-service">
+                            Service charge
+                        </label>
+
+                        <input type="text" id="custom-service" placeholder="5%">                        
+                    </div>
+                </div>
+
+                <button type="button" class="calculate-btn">
+                    Calculate it
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

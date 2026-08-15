@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Split Bill — Total</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main class="total-page">
+
+        <section class="total-card">
+            <p class="total-label">
+                YOUR BILL
+            </p>
+
+            <h1 id="bill-name-result">
+                Your bill
+            </h1>
+
+            <p class="total-label">
+                TOTAL
+            </p>
+
+            <p class="total-amount" id="grand-total" >
+                Rp 0
+            </p>
+            
+             <div class="total-divider"></div>
+                
+            <p class="total-label">
+                EVERYONE PAYS
+            </p>
+
+            <div class="people-total" id="people-total"></div>
+            <div class="total-divider"></div>
+               
+            <!-- COPY + SHARE -->
+            <div class="summary-actions">
+                <button type="button" id="copy-result">
+                    Copy Total
+                </button>
+         
+                <button  type="button" id="share-result">
+                    Share 
+                </button>
+            </div>
+
+            <!-- BACK + NEW BILL -->
+            <div class="summary-actions">
+                <a href="split.html">
+                    ← Split again
+                </a>
+
+                <button type="button" id="new-bill">
+                    New Bill
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
