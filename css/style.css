@@ -642,10 +642,11 @@ body {
 
     /* PEOPLE */
   /* PEOPLE */
+/* PEOPLE */
 .item-people {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
     width: 100%;
 }
 
@@ -653,9 +654,10 @@ body {
     display: flex !important;
     align-items: center;
     justify-content: flex-start !important;
-    gap: 6px;
+    gap: 6px !important;
+    width: auto !important;
     min-width: 0;
-    width: 100%;
+    flex: 0 0 auto;
 }
 
 .item-person input {
@@ -666,10 +668,9 @@ body {
 }
 
 .item-person span {
+    display: inline-block;
     min-width: 0;
-    overflow: hidden;
     white-space: nowrap;
-    text-overflow: ellipsis;
 }
 
 .people-list {
@@ -680,6 +681,7 @@ body {
     width: 100%;
     box-sizing: border-box;
 }
+
 
     /* RESULT */
     .result-actions {
